@@ -43,3 +43,12 @@ searchBtn.addEventListener("click", () => {
     checkWeather(searchBox.value);
 }
 )
+
+const formSubmit = () =>{
+    if(searchBox.value !== ""){
+        checkWeather(searchBox.value);
+    }
+    return false;
+}
+
+searchBox.addEventListener("focusout",formSubmit())
